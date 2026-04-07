@@ -27,7 +27,7 @@ This repository is organized by platform. Please refer to the specific subdirect
 
 ## ⚖️ License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
 
 ---
 
@@ -36,4 +36,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 GitHub: [@ccot7](https://github.com/ccot7)
 
 ---
-> *The guardian of your CPU's power consumption.*
+> *The sentinel for your CPU's power, thermals, and performance limits.*
