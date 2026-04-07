@@ -41,16 +41,19 @@ A native SwiftUI macOS app for monitoring Intel CPU power, temperature, frequenc
 ## Project structure
 
 ```
-CadmusPwr/
-├── AppConstants.swift        ← App name, version, all configurable constants
-├── CadmusPwrApp.swift         ← @main entry point
-├── ContentView.swift         ← Full window layout and all sub-views
-├── PowerMetricsReader.swift  ← Subprocess management + plist parsing
-├── HUDGraphView.swift        ← Canvas-based rolling graph
-├── CoreViews.swift           ← Per-core row view and heatmap
-├── Theme.swift               ← Dark / light colour palettes
-├── Assets.xcassets/          ← Place AppIcon.appiconset here
-└── CadmusPwr.entitlements     ← Hardened runtime entitlements
+macos/
+├── Makefile
+├── CadmusPwr.xcodeproj
+└── CadmusPwr/
+    ├── AppConstants.swift        ← App name, version, all configurable constants
+    ├── CadmusPwrApp.swift        ← @main entry point
+    ├── ContentView.swift         ← Full window layout and all sub-views
+    ├── PowerMetricsReader.swift  ← Subprocess management + plist parsing
+    ├── HUDGraphView.swift        ← Canvas-based rolling graph
+    ├── CoreViews.swift           ← Per-core row view and heatmap
+    ├── Theme.swift               ← Dark / light colour palettes
+    ├── Assets.xcassets/          ← Place AppIcon.appiconset here
+    └── CadmusPwr.entitlements    ← Hardened runtime entitlements
 ```
 
 ### Renaming the app
@@ -69,7 +72,7 @@ The Makefile wraps `xcodebuild` so you can build and install without opening Xco
 # One-time setup — write the sudoers entry (see Permissions section)
 make sudoers
 
-# Build a Release .app into build/Release/
+# Build a Release .app into .build/Release/
 make
 
 # Build and copy to /Applications
@@ -78,8 +81,11 @@ make install
 # Build a Debug .app (faster, keeps debug symbols)
 make debug
 
-# Remove the build/ directory
+# Remove local .build/ and system DerivedData
 make clean
+
+# Remove the app from /Applications
+make uninstall
 
 # Print all available targets
 make help
@@ -89,11 +95,12 @@ make help
 
 | Target | What it does |
 |---|---|
-| `make` | Build Release `.app` → `build/Release/CadmusPwr.app` |
-| `make debug` | Build Debug `.app` → `build/Debug/CadmusPwr.app` |
+| `make` | Build Release `.app` → `.build/Build/Products/Release/CadmusPwr.app` |
+| `make debug` | Build Debug `.app` → `.build/Build/Products/Debug/CadmusPwr.app` |
 | `make install` | Build Release then copy to `/Applications` |
 | `make sudoers` | Write `/etc/sudoers.d/CadmusPwr` at chmod 400 |
-| `make clean` | Delete `build/` |
+| `make clean` | Delete `.build/` and system DerivedData |
+| `make uninstall ` | Remove `CadmusPwr.app` from  `/Applications` |
 | `make help` | List targets |
 
 ### Option B — Xcode GUI
