@@ -49,9 +49,9 @@ all:
 	  -scheme          "$(SCHEME)"  \
 	  -configuration   Release      \
 	  -derivedDataPath "$(BUILD_DIR)" \
+	  SYMROOT="$(BUILD_DIR)/Build/Products" \
+	  OBJROOT="$(BUILD_DIR)/Build/Intermediates" \
 	  build
-	@echo ""
-	@echo "✓  Built: $(APP_BUNDLE)"
 
 ## Build a Debug .app bundle (faster, includes debug symbols for lldb)
 debug:
@@ -87,7 +87,14 @@ sudoers:
 ## Remove all build artefacts
 clean:
 	rm -rf "$(BUILD_DIR)"
-	@echo "✓  Removed $(BUILD_DIR)/"
+	rm -rf ~/Library/Developer/Xcode/DerivedData/$(APP_NAME)-*
+	@echo "✓  Cleaned local .build and system DerivedData"
+
+## Remove build files AND the installed app
+uninstall: clean
+	sudo rm -rf "/Applications/$(APP_NAME).app"
+	@echo "✓  Uninstalled app (sudoers entry remains active)"
+
 
 ## Print available targets
 help:
