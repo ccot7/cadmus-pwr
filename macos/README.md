@@ -1,9 +1,12 @@
 # CadmusPwr — macOS
 
-A native SwiftUI macOS app for monitoring Intel CPU power, temperature, frequency, and utilisation in real time. Inspired by Intel Power Gadget. Reads hardware data via Apple's `powermetrics` tool, which accesses the SMC (System Management Controller) directly — no kernel extensions, no third-party drivers.
+A native SwiftUI macOS app for monitoring Intel CPU power, temperature, frequency, and utilisation in real time. 
+
+Inspired by Intel Power Gadget. Reads hardware data via Apple's `powermetrics` tool, which accesses the SMC (System Management Controller) directly — no kernel extensions, no third-party drivers.
 
 > Developed and tested on **MacBookPro15,3 (Intel Core i9-9980HK, 2019)**.
-> Works on other Intel Macs and Apple Silicon (Apple Silicon exposes richer sub-domain data).
+>
+> Works on other Intel Macs and "Should (untested)" work on Apple Silicon (Apple Silicon exposes richer sub-domain data).
 
 ---
 
@@ -55,10 +58,6 @@ macos/
     ├── Assets.xcassets/          ← Place AppIcon.appiconset here
     └── CadmusPwr.entitlements    ← Hardened runtime entitlements
 ```
-
-### Renaming the app
-
-Open `AppConstants.swift` and change `appName`. It propagates to the window header, title bar, and status bar automatically — no other files need editing.
 
 ---
 
@@ -145,7 +144,9 @@ Verify (should run without asking for a password):
 sudo powermetrics --samplers cpu_power,smc,thermal -i 1000 -n 1 --format plist
 ```
 
-**Why chmod 400?** sudo requires sudoers files to be non-writable by group and others. `400` (owner read-only) is the strictest safe value. `600` causes sudo to reject the file with a "bad permissions" error.
+**Why chmod 400?** 
+
+sudo requires sudoers files to be non-writable by group and others. `400` (owner read-only) is the strictest safe value. `600` causes sudo to reject the file with a "bad permissions" error.
 
 ---
 
@@ -240,4 +241,4 @@ See [CHANGELOG_macos.md](CHANGELOG_macos.md).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/ccot7/cadmus-pwr/blob/main/LICENSE).
