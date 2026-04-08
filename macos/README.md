@@ -1,4 +1,4 @@
-# CadmusPwr — macOS
+# CadmusPwr — macOS <img src="../assets/logo.png" width="50" align="right">
 
 A native SwiftUI macOS app for monitoring Intel CPU power, temperature, frequency, and utilisation in real time. 
 
@@ -242,3 +242,12 @@ See [CHANGELOG_macos.md](CHANGELOG_macos.md).
 ## License
 
 MIT — see [LICENSE](https://github.com/ccot7/cadmus-pwr/blob/main/LICENSE).
+
+---
+
+## 👤 Author
+**Cadmus of Tyre**  
+GitHub: [@ccot7](https://github.com/ccot7)
+
+---
+> *The sentinel for your CPU's power, thermals, and performance limits.*
