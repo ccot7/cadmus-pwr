@@ -83,6 +83,7 @@ make udev
 ## Cleanup
 
 make uninstall
+
 make clean
 
 ---
@@ -113,7 +114,9 @@ or
 ## Permissions (IMPORTANT)
 
 RAPL energy counters require elevated read access ie access to:
+```bash
 /sys/class/powercap/intel-rapl:*/
+```
 
 ## ✅ Recommended fix: udev rule (clean, permanent)
 
@@ -413,10 +416,19 @@ The `.desktop` file stays the same and doesn't need to be touched.
 
 ## Changelog
 
-See [CHANGELOG_macos.md](CHANGELOG.md).
+See [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## License
 
 MIT — see [LICENSE](https://github.com/ccot7/cadmus-pwr/blob/main/LICENSE).
+
+---
+
+## 👤 Author
+**Cadmus of Tyre**  
+GitHub: [@ccot7](https://github.com/ccot7)
+
+---
+> *The sentinel for your CPU's power, thermals, and performance limits.*
