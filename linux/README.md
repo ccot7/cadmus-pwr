@@ -1,4 +1,4 @@
-# CadmusPwr — Linux
+# CadmusPwr — Linux <img src="../assets/logo.png" width="50" align="right">
 
 A native GTK3 desktop app for monitoring Intel CPU power, temperature, frequency, and utilization on Linux. Inspired by Intel Power Gadget.
 
