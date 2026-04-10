@@ -191,7 +191,7 @@ Values with `~` are estimates using `cores_active_ratio` and `gpu_active_ratio` 
 
 ### Per-core data
 
-Each of the 16 logical CPUs reports frequency from `freq_hz` and utilisation from `duty_cycles[0]` (the finest 16 µs measurement window). Logical CPU id = physical core × 2 + thread index.
+Each of the 16 logical CPUs reports frequency from `freq_hz` and utilisation from `duty_cycles.last` (the ~32 ms averaging window). This matches what Activity Monitor and Intel Power Gadget report. Logical CPU id = physical core × 2 + thread index.
 
 ### Throttle detection
 
