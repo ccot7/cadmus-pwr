@@ -7,6 +7,8 @@ Runs natively on Wayland and X11. Zero polling daemons, no DBus - reads directly
 >
 > Works on any Linux distro with GTK3 and an Intel RAPL-capable CPU (Sandy Bridge 2011+).
 
+![CadmusPwr Linux](../assets/cadmuspwr_linux.png)
+
 ---
 
 ## Features
