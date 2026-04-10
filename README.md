@@ -17,10 +17,10 @@ Named after **Cadmus**, the legendary founder of Tyre, this tool is designed for
 
 This repository is organized by platform. Please refer to the specific subdirectory for build and installation instructions:
 
-- **[macOS version](./macos/README.md)**  
+- **[macOS version](./macos)**  
   Built with Swift and Xcode. Features a sleek HUD-style interface and utilizes `powermetrics` via a custom sudoers configuration.
   
-- **[Linux version](./linux/README.md)**  
+- **[Linux version](./linux)**  
   Built with C and GTK3. Interfaces directly with the Linux `intel_rapl` driver for raw power data.
 
 ---
