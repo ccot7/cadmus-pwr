@@ -1,6 +1,6 @@
 # CadmusPwr <img src="assets/logo.png" width="50" align="right">
 
-**CadmusPwr** is a lightweight, low-level power monitoring utility for macOS and Linux. It serves as a high-performance alternative to the Intel Power Gadget, providing real-time insights into CPU power consumption, voltage, and thermal metrics.
+**CadmusPwr** is a lightweight, low-level power monitoring utility for macOS and Linux. It serves as a high-performance alternative to the Intel Power Gadget, providing real-time insights into CPU power consumption, frequency, and thermal metrics.
 
 Named after **Cadmus**, the legendary founder of Tyre, this tool is designed for developers and power users who need precise hardware telemetry without the overhead of heavy GUI suites.
 
