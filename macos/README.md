@@ -8,6 +8,8 @@ Inspired by Intel Power Gadget. Reads hardware data via Apple's `powermetrics` t
 >
 > Works on other Intel Macs and "Should (untested)" work on Apple Silicon (Apple Silicon exposes richer sub-domain data).
 
+![CadmusPwr Linux](../assets/cadmuspwr_macos.png)
+
 ---
 
 ## Features
