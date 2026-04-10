@@ -11,7 +11,7 @@ Runs natively on Wayland and X11. Zero polling daemons, no DBus - reads directly
 
 ---
 
-## Features
+## 🛠 Features
 
 - **Package, core, DRAM, and uncore power** via Intel RAPL — direct hardware energy counters, no estimation
 - **TDP %** from `constraint_0_power_limit_uw`
@@ -330,7 +330,7 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
-## License
+## ⚖️ License
 
 MIT — see [LICENSE](https://github.com/ccot7/cadmus-pwr/blob/main/LICENSE).
 
