@@ -12,7 +12,7 @@ Inspired by Intel Power Gadget. Reads hardware data via Apple's `powermetrics` t
 
 ---
 
-## Features
+## 🛠 Features
 
 - **Package power** via Intel RAPL (always a real hardware measurement)
 - **Sub-domain breakdown** — CORES / GPU / DRAM / UNCORE (real RAPL values when available; activity-ratio estimates on Intel laptops, clearly marked with `~`)
@@ -241,7 +241,7 @@ See [CHANGELOG_macos.md](CHANGELOG_macos.md).
 
 ---
 
-## License
+## ⚖️ License
 
 MIT — see [LICENSE](https://github.com/ccot7/cadmus-pwr/blob/main/LICENSE).
 
