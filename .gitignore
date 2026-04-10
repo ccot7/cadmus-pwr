@@ -50,3 +50,8 @@ cadmuspwr
 
 # --- Swift Package Manager ---
 .swiftpm/
+
+# --- Release specifics ---
+release_notes.md
+release.sh
+Release-script-how-to.txt
