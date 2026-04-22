@@ -55,7 +55,7 @@ install: all
 
 ## Install .desktop entry so the app appears in GNOME Activities
 ICON_DIR := $(HOME)/.local/share/icons
-ICON_FULL_PATH := $(ICON_DIR)/hicolor/256x256/apps
+ICON_FULL_PATH := $(ICON_DIR)/hicolor/512x512/apps
 
 install-icon:
 	mkdir -p $(ICON_FULL_PATH)
@@ -67,7 +67,7 @@ desktop: install-icon
 	echo "Name=CadmusPwr" >> $(DESKTOP_DST)
 	echo "Comment=CPU, Power and thermal monitor" >> $(DESKTOP_DST)
 	echo "Exec=$(INSTALL_BIN)" >> $(DESKTOP_DST)
-	echo "Icon=CadmusPwr" >> $(DESKTOP_DST) ## will be taken from system:~/.local/share/icons/hicolor/256x256/apps/CadmusPwr.png
+	echo "Icon=$(ICON_FULL_PATH)/CadmusPwr.png" >> $(DESKTOP_DST) ## will be taken from system:~/.local/share/icons/hicolor/512x512/apps/CadmusPwr.png
 	echo "Terminal=false" >> $(DESKTOP_DST)
 	echo "Type=Application" >> $(DESKTOP_DST)
 	echo "Categories=Utility;System;Monitor;" >> $(DESKTOP_DST)

@@ -181,7 +181,7 @@ This installs the icon to `~/.local/share/icons/hicolor/256x256/apps/` and write
 Name=CadmusPwr
 Comment=CPU Power Monitor
 Exec=/home/YOUR_USERNAME/.local/bin/CadmusPwr
-Icon=~/.local/share/icons/hicolor/256x256/apps/CadmusPwr.png
+Icon=~/.local/share/icons/hicolor/512x512/apps/CadmusPwr.png
 Terminal=false
 Type=Application
 Categories=Utilities;System;Monitor;
