@@ -44,9 +44,7 @@ Thumbs.db
 # Prevents leaking local config or usernames
 sudoers_entry.txt
 /etc/sudoers.d/cadmuspwr
-/etc/sudoers.d/powermon
-powermon
-cadmuspwr
+/cadmuspwr
 
 # --- Swift Package Manager ---
 .swiftpm/
